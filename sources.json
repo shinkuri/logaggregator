@@ -1,0 +1,39 @@
+{
+  "sources": [
+    {
+      "source": {
+        "name": "OwnCloud",
+        "path": "F:/Development/logaggregator/dummy/OwnCloud.log",
+        "hierarchy": ""
+      }
+    },
+    {
+      "source": {
+        "name": "Plex",
+        "path": "F:/Development/logaggregator/dummy/Plex.log",
+        "hierarchy": ""
+      }
+    },
+    {
+      "source": {
+        "name": "Gitea",
+        "path": "F:/Development/logaggregator/dummy/Gitea.log",
+        "hierarchy": ""
+      }
+    },
+    {
+      "source": {
+        "name": "Jenkins",
+        "path": "F:/Development/logaggregator/dummy/Jenkins.log",
+        "hierarchy": "CI/CD"
+      }
+    },
+    {
+      "source": {
+        "name": "Nexus",
+        "path": "F:/Development/logaggregator/dummy/Nexus.log",
+        "hierarchy": "CI/CD"
+      }
+    }
+  ]
+}
