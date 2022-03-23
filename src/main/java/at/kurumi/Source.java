@@ -30,7 +30,7 @@ public class Source {
 
     /**
      * The hierarchy string describes where the source should be positioned within the sources-tree structure on the
-     * client. A closing angle bracket (>) is used as delimiter between hierarchy-levels. If the string is empty,
+     * client. A forward-slash is used as delimiter between hierarchy-levels. If the string is empty,
      * the source will be positioned at the root level.
      *
      * @return the hierarchy description

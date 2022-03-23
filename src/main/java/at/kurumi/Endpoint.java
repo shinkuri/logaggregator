@@ -4,19 +4,20 @@ import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
+import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-@ServerEndpoint("/log")
+@ServerEndpoint("/log/{source}")
 public class Endpoint {
 
     private static final Set<Session> sessions = Collections.synchronizedSet(new HashSet<>());
 
 
     @OnOpen
-    public void onOpen(Session session) {
+    public void onOpen(Session session, @PathParam("source") String source) {
         sessions.add(session);
 
     }
