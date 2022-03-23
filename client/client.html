@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kurumi Logs</title>
+  <link rel="stylesheet" href="client.css">
+</head>
+<body>
+  <div class="split left">
+    <ul id="sources">
+      <li><span class="caret">Server</span>
+        <ul class="nested">
+          <li><span>OwnCloud</span></li>
+          <li><span>Plex</span></li>
+          <li><span>Gitea</span></li>
+          <li><span class="caret">CI/CD</span>
+            <ul class="nested">
+              <li>Jenkins</li>
+              <li>Nexus</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="split right">
+    <p>LOG</p>
+  </div>
+  <script>
+    var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+  </script>
+
+<!--<p>Use Websockets with javascript. On server side work J2EE</p>-->
+<!--<script>-->
+
+<!--  window.onload = function () {-->
+<!--    var uri = "ws://localhost:8080/log"; // ws -> not secure, wss (ssl)-->
+<!--    var websocket = new WebSocket(uri);-->
+
+<!--    // override Methode: when recive msg from server.-->
+<!--    websocket.onmessage = function (msg) {-->
+<!--      alert("msg recived from server: " + msg.data);-->
+<!--    }-->
+
+<!--    // override Methode: when server throw an error.-->
+<!--    websocket.onerror = function (evt) {-->
+<!--      alert("error from server: Can't establish a connection to the server!");-->
+<!--      console.info(evt);-->
+<!--    }-->
+
+<!--    // override Methode: when server close the connection.-->
+<!--    websocket.onclose = function () {-->
+<!--      alert("Server close connection.");-->
+
+<!--    }-->
+
+<!--    // override Methode: when websocket connection was established-->
+<!--    websocket.onopen = function () {-->
+<!--      // send a msg to server-->
+<!--      websocket.send("a msg from client side");-->
+<!--    }-->
+<!--  }-->
+
+
+<!--</script>-->
+
+</body>
+</html>
