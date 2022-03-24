@@ -1,4 +1,4 @@
-package at.kurumi;
+package at.kurumi.json;
 
 /**
  * Describes a log source.
