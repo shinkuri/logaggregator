@@ -10,10 +10,8 @@ import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import java.io.*;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Startup
 @Singleton
@@ -51,5 +49,17 @@ public class Sources {
         return sources.stream()
                 .filter(source -> source.getName().equals(name))
                 .findFirst();
+    }
+
+    /**
+     * Returns a list of all source names with their hierarchy string prepended:
+     * <code>parent/child/sourceName</code>
+     *
+     * @return list of source names and hierarchies
+     */
+    public List<String> getSourceHierarchiesWithNames() {
+        return sources.stream()
+                .map(source -> String.format("%s/%s", source.getHierarchy(), source.getName()))
+                .collect(Collectors.toList());
     }
 }

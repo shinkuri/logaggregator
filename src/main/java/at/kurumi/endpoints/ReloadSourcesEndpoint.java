@@ -7,9 +7,10 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-@Path("/reload")
+@Path("/reloadSources")
 public class ReloadSourcesEndpoint {
 
+    @SuppressWarnings("unused")
     @Inject private Sources sources;
 
     @GET
